@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.8)
-project(launch_ros)
+project(navtech_ros)
 
 ## Define C++ standard as C++ 17
 if(NOT CMAKE_CXX_STANDARD)
