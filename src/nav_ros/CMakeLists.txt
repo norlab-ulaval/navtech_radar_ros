@@ -5,7 +5,7 @@ cmake_minimum_required(VERSION 3.16)
 project(nav_ros)
 
 ## Define the SDK path
-set(SDK_PATH /home/william/iasdk/cpp_17/src)
+set(SDK_PATH /home/robot/iasdk/cpp_17/src)
 
 ## Add compile options
 add_compile_options(
