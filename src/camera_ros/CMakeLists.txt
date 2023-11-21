@@ -92,5 +92,9 @@ install(TARGETS
   camera_subscriber_to_video
   DESTINATION lib/${PROJECT_NAME})
 
+install(DIRECTORY config
+	DESTINATION share/${PROJECT_NAME}
+)
+
 ## Install the package
 ament_package()

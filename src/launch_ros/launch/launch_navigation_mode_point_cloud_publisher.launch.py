@@ -1,12 +1,19 @@
+import os
+from ament_index_python.packages import get_package_share_directory
 from launch import LaunchDescription
 from launch_ros.actions import Node
 
 def generate_launch_description():
+  config = os.path.join(
+          get_pakage_share_directory("navtech_ros"),
+          "config",
+          "navigation_mode_point_cloud_publisher",
+          )
   return LaunchDescription([
 
     Node(
-        package="nav_ros",
-        parameters=["../../nav_ros/config/navigation_mode_point_cloud_publisher.yaml"],
+        package="navtech_ros",
+        parameters=[config],
         executable="navigation_mode_point_cloud_publisher"
     ),
 
