@@ -12,7 +12,7 @@ def generate_launch_description():
   return LaunchDescription([
 
     Node(
-        package="navtech_ros",
+        package="navtech_nav_ros",
         parameters=[config],
         executable="colossus_and_camera_publisher"
     ),

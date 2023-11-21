@@ -7,25 +7,13 @@ def generate_launch_description():
   config = os.path.join(
           get_package_share_directory("navtech_ros"),
           "config",
-          "b_scan_publisher",
+          "b_scan_publisher.yaml",
           )
   return LaunchDescription([
 
     Node(
-        package="navtech_ros",
+        package="navtech_nav_ros",
         parameters=[config],
         executable="b_scan_publisher"
-    ),
-
-    Node(
-        package="tf2_ros",
-        arguments = ["0", "0", "0", "0", "0", "0", "map", "b_scan_image"],
-        executable="static_transform_publisher"
-    ),
-
-    Node(
-        package="rviz2",
-        arguments=["-d../../rviz_views/b_scan_view.rviz"],
-        executable="rviz2"
     )
   ])

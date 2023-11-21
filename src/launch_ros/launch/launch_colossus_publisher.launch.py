@@ -12,8 +12,8 @@ def generate_launch_description():
   return LaunchDescription([
 
     Node(
-        package="navtech_ros",
-        parameters=["../../nav_ros/config/colossus_publisher.yaml"],
+        package="navtech_nav_ros",
+        parameters=[config],
         executable="colossus_publisher"
     )
   ])
